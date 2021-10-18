@@ -8,10 +8,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        val textView = findViewById<TextView>(R.id.txt_hello)
-        textView.text = "asdasda"
-
+        setContentView(R.layout.activity_linear)
     }
 }
