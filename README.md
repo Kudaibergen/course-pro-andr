@@ -6,7 +6,7 @@
 Чтобы была возможность скролить экран по вертикали.
 И если необходимо по горизонтали
 
-2) Дополнительно
+2) Дополнительно <br/>
 Сверстать [экран](https://riggaroo.co.za/wp-content/uploads/2017/09/constraintlayout_android_example.png) с помощью ConstraintLayout`а
 
 
