@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menu_1"
+        android:title="fragment 1"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="withText"/>
+
+    <item android:id="@+id/menu_2"
+        android:title="fragment 2"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="withText"/>
+
+    <item android:id="@+id/menu_3"
+        android:title="fragment 3"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="withText"/>
+
+</menu>
