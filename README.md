@@ -131,3 +131,13 @@
 
 ### HW-19
 
+View Binding <br/>
+
+Перенесите приложение "Калькулятор" из HW-10 на вьюБиндинг
+
+
+### HW-20
+
+RecyclerView <br/>
+
+asdklkasd
