@@ -1,14 +1,13 @@
 package com.kay.progayim
 
 import android.os.Bundle
-import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
-
-/**
- * https://www.geeksforgeeks.org/navigation-drawer-in-android/
- */
+import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
@@ -18,9 +17,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+
+        val navView = findViewById<NavigationView>(R.id.navView)
+
         // drawer layout instance to toggle the menu icon to open
         // drawer and back button to close drawer
-        drawerLayout = findViewById(R.id.drawer_layout)
+        drawerLayout = findViewById(R.id.drawerLayout)
         drawerToggle =
             ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close)
 
@@ -31,12 +35,18 @@ class MainActivity : AppCompatActivity() {
 
         // to make the Navigation drawer icon always appear on the action bar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        toolbar.setNavigationOnClickListener {
+            drawerLayout.openDrawer(GravityCompat.START)
+        }
+
+        navView.setNavigationItemSelectedListener { menuItem ->
+            // Handle menu item selected
+            menuItem.isChecked = true
+            drawerLayout.closeDrawer(GravityCompat.START)
+            Toast.makeText(this, "menu- ${menuItem.title}", Toast.LENGTH_SHORT).show()
+            true
+        }
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (drawerToggle.onOptionsItemSelected(item)) {
-            return true
-        }
-        return super.onOptionsItemSelected(item)
-    }
 }
