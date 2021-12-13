@@ -234,3 +234,6 @@ Activity + Implicit Intent <br/>
 
 ### HW-31
 
+NavigationDrawer + Fragments <br/>
+Интерфейс программы [тут](https://ibb.co/qm1M4K5) <br/>
+По нажатию на итемы в нав-меню открывать соответствующие фрагменты <br/>
