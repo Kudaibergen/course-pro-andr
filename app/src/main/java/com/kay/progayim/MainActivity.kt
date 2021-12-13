@@ -6,6 +6,10 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 
+/**
+ * https://www.geeksforgeeks.org/navigation-drawer-in-android/
+ */
+
 class MainActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var drawerToggle: ActionBarDrawerToggle
