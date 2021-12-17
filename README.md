@@ -237,3 +237,12 @@ Activity + Implicit Intent <br/>
 NavigationDrawer + Fragments <br/>
 Интерфейс программы [тут](https://ibb.co/qm1M4K5) <br/>
 По нажатию на итемы в нав-меню открывать соответствующие фрагменты <br/>
+
+
+### HW-32
+
+RecyclerView + Grid <br/>
+Интерфейс программы должен выглядеть [таким](https://ibb.co/HpNBxTf) образом. <br/>
+
+
+### HW-33
