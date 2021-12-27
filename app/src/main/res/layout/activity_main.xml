@@ -15,10 +15,10 @@
         android:paddingVertical="20dp"
         android:background="@color/white"
         app:lpsvPaymentDateText="Оплатить до 24 января"
-        app:lpsvPaymentAmountText="38 000 тг"
+        app:lpsvPaymentAmountText="38 000 c"
         app:lpsvPaymentButtonText="Оплатить"
         app:lpsvPaymentText="@string/common.credit.enoughFunds"
-        app:lpsvPaymentStatus="toPay"
+        app:lpsvPaymentStatus="expired"
         app:layout_constraintTop_toTopOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,10 +23,10 @@ class LoanPaymentStateView(context: Context, attrs: AttributeSet) : ConstraintLa
 
     init {
         attrs.obtainStyledAttributes(context, R.styleable.LoanPaymentStateView) {
-            val paymentDateText = it.getString(R.styleable.LoanPaymentStateView_lpsvPaymentDateText) ?: "ss"
-            val paymentAmountText = it.getString(R.styleable.LoanPaymentStateView_lpsvPaymentAmountText) ?: "sss"
-            val paymentButtonText = it.getString(R.styleable.LoanPaymentStateView_lpsvPaymentButtonText) ?: "ssss"
-            val paymentText = it.getString(R.styleable.LoanPaymentStateView_lpsvPaymentText) ?: "sssss"
+            val paymentDateText = it.getString(R.styleable.LoanPaymentStateView_lpsvPaymentDateText) ?: ""
+            val paymentAmountText = it.getString(R.styleable.LoanPaymentStateView_lpsvPaymentAmountText) ?: ""
+            val paymentButtonText = it.getString(R.styleable.LoanPaymentStateView_lpsvPaymentButtonText) ?: ""
+            val paymentText = it.getString(R.styleable.LoanPaymentStateView_lpsvPaymentText) ?: ""
             val paymentStatus = it.getInt(R.styleable.LoanPaymentStateView_lpsvPaymentStatus, STATUS_NEED_TO_PAY)
             setPaymentDateText(paymentDateText)
             setPaymentAmountText(paymentAmountText)
