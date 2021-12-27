@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LoanPaymentStateView">
+        <attr name="lpsvPaymentDateText" format="string" />
+        <attr name="lpsvPaymentAmountText" format="string" />
+        <attr name="lpsvPaymentButtonText" format="string" />
+        <attr name="lpsvPaymentText" format="string" />
+        <attr name="lpsvPaymentStatus" format="enum">
+            <enum name="paid" value="1" />
+            <enum name="toPay" value="2" />
+            <enum name="toPaySoon" value="3" />
+            <enum name="expired" value="4" />
+        </attr>
+    </declare-styleable>
+</resources>

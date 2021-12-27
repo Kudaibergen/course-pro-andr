@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="16dp"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/loan_status_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_schedule_overdue" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/loan_payment_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:textAppearance="@style/BlackPrimaryTextView.14dp"
+        app:layout_constraintBottom_toTopOf="@id/loan_payment_amount"
+        app:layout_constraintStart_toEndOf="@id/loan_status_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Оплатить до 24 января" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/loan_payment_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/BlackPrimaryTextView.24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/loan_payment_date"
+        app:layout_constraintTop_toBottomOf="@id/loan_payment_date"
+        tools:text="138 343,00 тг" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loan_payment_btn"
+        style="@style/UIRedButton.14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif"
+        android:maxWidth="156dp"
+        android:minHeight="40dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/common.funds.pay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/loan_payment_text"
+        style="@style/GreenTextView.14dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="@string/common.credit.enoughFunds"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.3"
+        tools:visibility="gone" />
+
+</merge>
