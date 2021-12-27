@@ -11,10 +11,6 @@ inline fun <T : ViewBinding> ViewGroup.viewBinding(block: (LayoutInflater, ViewG
     return block.invoke(LayoutInflater.from(context), this)
 }
 
-inline fun <T : ViewBinding> ViewGroup.viewBinding(block: (LayoutInflater) -> T): T {
-    return block.invoke(LayoutInflater.from(context))
-}
-
 fun AttributeSet?.obtainStyledAttributes(context: Context, styleable: IntArray, block: (TypedArray) -> Unit) {
     if (this == null) return
 

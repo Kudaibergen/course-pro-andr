@@ -11,13 +11,6 @@ import com.kay.progayim.ext.viewBinding
 
 class LoanPaymentStateView(context: Context, attrs: AttributeSet) : ConstraintLayout(context, attrs) {
 
-    companion object {
-        private const val STATUS_PAID = 1
-        private const val STATUS_NEED_TO_PAY = 2
-        private const val STATUS_NEED_TO_PAY_SOON = 3
-        private const val STATUS_EXPIRED = 4
-    }
-
     private val binding = viewBinding(ViewLoanPaymentStateBinding::inflate)
     var onClicked: (() -> Unit) = {}
 
@@ -75,5 +68,12 @@ class LoanPaymentStateView(context: Context, attrs: AttributeSet) : ConstraintLa
                 }
             }
         }
+    }
+
+    companion object {
+        private const val STATUS_PAID = 1
+        private const val STATUS_NEED_TO_PAY = 2
+        private const val STATUS_NEED_TO_PAY_SOON = 3
+        private const val STATUS_EXPIRED = 4
     }
 }
