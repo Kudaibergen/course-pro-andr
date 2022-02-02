@@ -13,7 +13,6 @@ class App : Application() {
         mInstance = this
         database = Room.databaseBuilder(this, AppDatabase::class.java, "database")
             .fallbackToDestructiveMigration()
-            .allowMainThreadQueries()
             .build()
     }
 
