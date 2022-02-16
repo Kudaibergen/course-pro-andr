@@ -43,6 +43,17 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+    implementation "com.squareup.okhttp3:okhttp:4.6.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.6.0"
+
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.0"
+    implementation "io.reactivex.rxjava2:rxjava:2.1.6"
+
+
     dependencies {
         implementation 'com.github.bumptech.glide:glide:4.12.0'
         // Glide v4 uses this new annotation processor -- see https://bumptech.github.io/glide/doc/generatedapi.html
