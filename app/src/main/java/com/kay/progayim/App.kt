@@ -28,7 +28,7 @@ class App : Application() {
             .build()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(BASE_MOCK)
             .client(okHttpClient)
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
@@ -54,6 +54,7 @@ class App : Application() {
     }
 
     companion object {
+        const val BASE_MOCK = "https://5a8507bd-1cec-40bc-b9f5-605b5b73e40a.mock.pstmn.io"
         const val BASE_URL = "https://api.github.com/"
         const val TIMEOUT = 300L
 

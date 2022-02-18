@@ -5,6 +5,7 @@ import io.reactivex.Single
 import okhttp3.Response
 import okhttp3.ResponseBody
 import retrofit2.http.GET
+import retrofit2.http.POST
 import retrofit2.http.Path
 
 interface GithubApi {
@@ -17,4 +18,13 @@ interface GithubApi {
 
     @GET("/search/repositories?q=language:kotlin&sort=stars&order=desc&per_page=50")
     fun searchRepositories(): Observable<RepoResult>
+
+    @GET("/sampleget")
+    fun getSample(): Single<ResponseBody>
+
+    @POST("/samplepost")
+    fun postSample(): Single<ResponseBody>
+
+    @GET("/sampleError")
+    fun errorSample(): Single<ResponseBody>
 }

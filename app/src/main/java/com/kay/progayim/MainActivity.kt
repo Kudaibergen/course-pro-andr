@@ -17,11 +17,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        githubApi.getRepositories()
+        githubApi.errorSample()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .doOnNext {
+            .doOnSuccess {
                 Log.e("TAG", "Result= $it")
+            }
+            .doOnError {
+                Log.e("TAG", "Error= $it")
             }
             .subscribe()
 
