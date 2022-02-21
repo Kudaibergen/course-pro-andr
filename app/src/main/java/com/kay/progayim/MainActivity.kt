@@ -9,15 +9,23 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var adapter: SimpleAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val recycler = findViewById<RecyclerView>(R.id.recycler)
         val layoutManager = LinearLayoutManager(this)
-        val adapter = SimpleAdapter {
-            Toast.makeText(this, "ITEM -$it", Toast.LENGTH_SHORT).show()
-        }
+        adapter = SimpleAdapter(
+            itemClick = {
+                Toast.makeText(this, "ITEM -$it", Toast.LENGTH_SHORT).show()
+            },
+            deleteClick = {
+                // dialog.builder()
+                // positive callback -> adapter.removeItem(it)
+            }
+        )
 
         recycler.layoutManager = layoutManager
         recycler.adapter = adapter
