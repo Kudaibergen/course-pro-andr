@@ -391,3 +391,10 @@ Room. Список + удаление <br/>
 ### HW-56
 
 ### HW-57
+
+Api + RecyclerView
+
+api- https://breakingbadapi.com/api/episodes
+
+Апишка возвращает список эпизодов сериала Во все тяжкие.
+Необходимо десериализовать данные с json и отобразить серии в recyclerView
