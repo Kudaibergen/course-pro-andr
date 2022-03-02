@@ -2,7 +2,10 @@
 
 02.03.2022, 60е занятие <br/>
 
-api - https://rickandmortyapi.com/api/character <br/>
+api get all characters
+ > https://rickandmortyapi.com/api/character <br/>
+api get a single character
+ > https://rickandmortyapi.com/api/character/{id} <br/>
 
 Список персонажей из сериала "Рик и Морти" <br/>
 
