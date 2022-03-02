@@ -4,6 +4,7 @@
 
 api get all characters
  > https://rickandmortyapi.com/api/character <br/>
+
 api get a single character
  > https://rickandmortyapi.com/api/character/{id} <br/>
 
