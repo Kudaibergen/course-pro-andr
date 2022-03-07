@@ -2,6 +2,8 @@ package com.kay.progayim
 
 import android.app.Application
 import android.util.Log
+import androidx.room.Room
+import androidx.viewbinding.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -12,12 +14,17 @@ import java.util.concurrent.TimeUnit
 class App : Application() {
 
     private val isDebug get() = BuildConfig.DEBUG
-
+    lateinit var database: AppDatabase
     lateinit var githubApi: GithubApi
 
     override fun onCreate() {
         super.onCreate()
         mInstance = this
+
+        database = Room.databaseBuilder(this, AppDatabase::class.java, "database")
+            .fallbackToDestructiveMigration()
+            .allowMainThreadQueries()
+            .build()
 
         val okHttpClient = OkHttpClient.Builder()
             .connectTimeout(TIMEOUT, TimeUnit.SECONDS)
@@ -54,7 +61,7 @@ class App : Application() {
     }
 
     companion object {
-        const val BASE_URL = "https://api.github.com/"
+        const val BASE_URL = "https://rickandmortyapi.com/api/"
         const val TIMEOUT = 300L
 
         private var mInstance: App? = null

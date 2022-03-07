@@ -17,4 +17,7 @@ interface GithubApi {
 
     @GET("/search/repositories?q=language:kotlin&sort=stars&order=desc&per_page=50")
     fun searchRepositories(): Observable<RepoResult>
+
+    @GET("character")
+    fun getCharacters(): Observable<ResponseDto>
 }
